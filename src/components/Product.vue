@@ -9,10 +9,10 @@
 </script>
 
 <template>
-    <section>
+    <section :id="product_id">
 
         <picture>
-            <img :src="scr_img" :alt="description" :id="product_id">
+            <img :src="scr_img" :alt="description" >
         </picture>
         <p>{{ description }}</p>
         <span class="price">R$ {{product_price}}</span>
