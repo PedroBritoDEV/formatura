@@ -1,5 +1,26 @@
-<script setup>
-    
+<script>
+    export default {
+        name: "header",
+        data() {
+            return {
+                isOpen: false,
+                screenWidth: 0,
+
+            };
+        },
+        methods: {
+            toggleDropdown() {
+                this.isOpen = !this.isOpen;
+            },
+            updateScreenWidth() {
+                this.screenWidth = window.innerWidth;
+            },
+        },
+        mounted() {
+            this.updateScreenWidth();
+        }
+
+    }
 </script>
 
 <template>
@@ -9,9 +30,9 @@
                 <img src="/public/img/logo-escola.png" alt="logo">
                 <h2>Loja Virtual Teceirão FAB 2023</h2>
             </div>
-            <i id="tropdown-btn" class="fa-solid fa-bars"></i>
-            <nav>
-                <ul>
+            <i id="tropdown-btn"  @click="toggleDropdown" class="fa-solid fa-bars"></i>
+            <nav  v-show="isOpen">
+                <ul id="drop-item">
                     <li><a href="#" target="_blank" rel="">LOJA</a></li>
                     <li><a href="#" target="_blank" rel="">RIFA</a></li>
                     <li><a href="#">VAQUINHA</a></li>
@@ -56,10 +77,14 @@
     }
     .header-content #tropdown-btn {
         display: none;
+        z-index: 4;
+        transition: .3s;
     }
     .header-content nav ul {
         display: flex;
         list-style: none;
+        transition: .3s;
+
     }
     .header-content nav ul li a{
         margin-left: 15px;
@@ -79,14 +104,23 @@
             height: 40px;
         }
         .header-content nav ul li a {
-            font-size: .9em;
+            border-bottom: 2px solid rgba(130, 54, 128, 0.633);
+            padding-right: 10px;
+
         }
         .header-content #tropdown-btn {
             display: inline-block;
             font-size: 2em;
         }
-        .header-content nav {
-            display: none;
+        .header-content #drop-item {
+            display: flex;
+            flex-direction: column;
+            background-color:#918ef4;
+            border-radius: .4em 0 0 .4em;
+            padding: 60px 20px 20px 0;
+            position: absolute;
+            top: 0px;
+            right: 0;
         }
     }
 </style>
