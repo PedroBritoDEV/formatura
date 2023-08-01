@@ -12,9 +12,17 @@
                 var dropdownItem = document.getElementById("drop-item")
                 dropdownItem.classList.toggle("hidden")
             },
+            isMobile() {
+                var dropdownItem = document.getElementById("drop-item")
+                if(window.innerWidth > 700) {
+                    dropdownItem.classList.remove("hidden")
+                }else {
+                    dropdownItem.classList.add("hidden")
+                }
+            }
         },
         mounted() {
-            this.updateScreenWidth();
+            this.isMobile()
         }
 
     }
