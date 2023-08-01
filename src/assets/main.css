@@ -17,4 +17,9 @@ colors
 
 body {
   background-color: rgb(230, 230, 230);
+  overflow-x: hidden;
+}
+.hidden {
+  transform: translateX(150px);
+  display: none;
 }

@@ -3,17 +3,14 @@
         name: "header",
         data() {
             return {
-                isOpen: false,
                 screenWidth: 0,
 
             };
         },
         methods: {
             toggleDropdown() {
-                this.isOpen = !this.isOpen;
-            },
-            updateScreenWidth() {
-                this.screenWidth = window.innerWidth;
+                var dropdownItem = document.getElementById("drop-item")
+                dropdownItem.classList.toggle("hidden")
             },
         },
         mounted() {
@@ -31,8 +28,8 @@
                 <h2>Loja Virtual Teceirão FAB 2023</h2>
             </div>
             <i id="tropdown-btn"  @click="toggleDropdown" class="fa-solid fa-bars"></i>
-            <nav  v-show="isOpen">
-                <ul id="drop-item">
+            <nav>
+                <ul id="drop-item" class="hidden">
                     <li><a href="#" target="_blank" rel="">LOJA</a></li>
                     <li><a href="#" target="_blank" rel="">RIFA</a></li>
                     <li><a href="#">VAQUINHA</a></li>
@@ -111,6 +108,8 @@
         .header-content #tropdown-btn {
             display: inline-block;
             font-size: 2em;
+            position: absolute;
+            right: 40px;
         }
         .header-content #drop-item {
             display: flex;
@@ -124,4 +123,3 @@
         }
     }
 </style>
-
