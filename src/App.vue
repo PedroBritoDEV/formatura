@@ -1,6 +1,7 @@
 <script setup>
 import Header from "./components/HeaderComponent.vue"
 import LojaComponent from "./components/LojaComponent.vue"
+import Rifa from "./components/RifaComponent.vue"
 
 
 </script>
@@ -8,7 +9,10 @@ import LojaComponent from "./components/LojaComponent.vue"
 <template>
   <div class="app">
     <Header/>
-    <LojaComponent/>
+    <main>
+      <LojaComponent/>
+      <Rifa/>
+    </main>
   </div>
 </template>
 

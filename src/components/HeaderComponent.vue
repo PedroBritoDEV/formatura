@@ -10,14 +10,14 @@
         methods: {
             toggleDropdown() {
                 var dropdownItem = document.getElementById("drop-item")
-                dropdownItem.classList.toggle("hidden")
+                dropdownItem.classList.toggle("mobile-hidden")
             },
             isMobile() {
                 var dropdownItem = document.getElementById("drop-item")
                 if(window.innerWidth > 700) {
-                    dropdownItem.classList.remove("hidden")
+                    dropdownItem.classList.remove("mobile-hidden")
                 }else {
-                    dropdownItem.classList.add("hidden")
+                    dropdownItem.classList.add("mobile-hidden")
                 }
             }
         },
@@ -38,9 +38,9 @@
             <i id="tropdown-btn"  @click="toggleDropdown" class="fa-solid fa-bars"></i>
             <nav>
                 <ul id="drop-item" class="hidden">
-                    <li><a href="#" target="_blank" rel="">LOJA</a></li>
-                    <li><a href="#" target="_blank" rel="">RIFA</a></li>
-                    <li><a href="#">VAQUINHA</a></li>
+                    <li><a href="#loja" >LOJA</a></li>
+                    <li><a href="#rifa">RIFA</a></li>
+                    <li><a href="#vaquinha">VAQUINHA</a></li>
                 </ul>
             </nav>
         </div>
@@ -117,7 +117,7 @@
             display: inline-block;
             font-size: 2em;
             position: absolute;
-            right: 40px;
+            right: 10px;
         }
         .header-content #drop-item {
             display: flex;

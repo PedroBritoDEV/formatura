@@ -15,11 +15,12 @@ colors
   font-family: 'Poppins', sans-serif;
 }
 
-body {
+body,html {
   background-color: rgb(230, 230, 230);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
-.hidden {
-  transform: translateX(150px);
-  display: none;
+.mobile-hidden {
+  display: none!important;
 }
+
