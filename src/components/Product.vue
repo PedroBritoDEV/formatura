@@ -16,7 +16,7 @@
         </picture>
         <p>{{ description }}</p>
         <span class="price">R$ {{product_price}}</span>
-        <a href="https://api.whatsapp.com/qr/IQU56RO4XL5XP1?autoload=1&app_absent=0"><button>Eu Quero  <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i></button></a>
+        <a href="https://wa.me/qr/7DKI47SCLASVK1"><button>Eu Quero  <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i></button></a>
     </section>
 </template>
 
@@ -66,5 +66,17 @@
     section button:hover {
         background-color: transparent;
         color: #fff;
+    }
+    @media (max-width:400px ) {
+        section {
+            width: 140px;
+        }
+    }
+    section picture {
+        width: 130px;
+        height: 130px;
+        overflow: hidden;
+        border-radius: .5em;
+        transition: .2s;
     }
 </style>

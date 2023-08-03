@@ -2,7 +2,7 @@
 import Header from "./components/HeaderComponent.vue"
 import LojaComponent from "./components/LojaComponent.vue"
 import Rifa from "./components/RifaComponent.vue"
-
+import Sobre from "./components/Sobre.vue"
 
 </script>
 
@@ -12,6 +12,7 @@ import Rifa from "./components/RifaComponent.vue"
     <main>
       <LojaComponent/>
       <Rifa/>
+      <Sobre/>
     </main>
   </div>
 </template>

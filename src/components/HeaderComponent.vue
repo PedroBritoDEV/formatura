@@ -40,7 +40,7 @@
                 <ul id="drop-item" class="hidden">
                     <li><a href="#loja" >LOJA</a></li>
                     <li><a href="#rifa">RIFA</a></li>
-                    <li><a href="#vaquinha">VAQUINHA</a></li>
+                    <li><a href="#vaquinha">SOBRE</a></li>
                 </ul>
             </nav>
         </div>
@@ -108,10 +108,13 @@
             width: 40px;
             height: 40px;
         }
+        .header-content nav ul li {
+            margin: 10px 0;
+        }
         .header-content nav ul li a {
-            border-bottom: 2px solid rgba(130, 54, 128, 0.633);
-            padding-right: 10px;
-
+            border-bottom: 1px solid rgba(130, 54, 128, 0.633);
+            padding-right: 15px;
+            padding-bottom: 5px;
         }
         .header-content #tropdown-btn {
             display: inline-block;
@@ -127,7 +130,12 @@
             padding: 60px 20px 20px 0;
             position: absolute;
             top: 0px;
-            right: 0;
+            right: -1px;
         }
     }
+     @media (max-width:450px) {
+        .header-content .logo h2 {
+            font-size: 1em;
+        }
+     }
 </style>

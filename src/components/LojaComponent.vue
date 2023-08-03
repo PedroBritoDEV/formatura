@@ -30,7 +30,8 @@
                 <Product description="Bom Bom" product_id="11" scr_img="./img/sonhodevalsa.jpg" product_price="1.00"/>
 
                 <Product description="Pirulito" product_id="12" scr_img="./img/pirulito.jpg" product_price="0.50"/>
-                <Product description="Pirulito Energético" product_id="3" scr_img="./img/pirulito-energetico.jpg" product_price="2.00"/>
+                
+                <Product description="Pirulito Energético" product_id="3" scr_img="./img/pirulito-energetico.jpg" product_price="0.75"/>
             </div>
             
 
